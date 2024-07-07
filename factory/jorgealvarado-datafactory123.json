@@ -1,0 +1,9 @@
+{
+	"name": "jorgealvarado-datafactory123",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6fcc2e5d-5e05-4818-9aa6-38902f4fec09",
+		"tenantId": "f907ff35-4f46-435b-9f17-fc54400c82c3"
+	}
+}

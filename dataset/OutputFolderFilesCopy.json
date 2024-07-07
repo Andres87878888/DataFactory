@@ -1,0 +1,33 @@
+{
+	"name": "OutputFolderFilesCopy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LINK_ADLS_DATAFACTORY",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"ArchivoOUT": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().ArchivoOUT",
+					"type": "Expression"
+				},
+				"folderPath": "Capa_bronce",
+				"fileSystem": "alvaradojorge"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
